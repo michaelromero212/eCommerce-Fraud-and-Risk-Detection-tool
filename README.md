@@ -32,39 +32,39 @@ The Streamlit dashboard empowers analysts to investigate threats holistically. B
 ### 1. Executive Overview & Risk Distribution
 The Overview tab provides real-time KPIs and a distribution of transaction risks. We utilize a clean histogram to show the long-tail nature of fraudulent activity, moving away from cluttered statistical plots to prioritize immediate readability.
 
-![Executive Overview](screenshots/Screenshot%202026-03-12%20at%208.33.46%20PM.jpg)
+![Executive Overview](screenshots/01_overview.jpg)
 
 ### 2. Time Series & Volume Tracking
 This dual-axis subplot tracks daily transaction volume (bars) against the average risk score (line). Spikes in the risk line independent of transaction volume often signify concentrated, systemic fraud attacks occurring on those specific days.
 
-![Time Series Tracking](screenshots/Screenshot%202026-03-12%20at%208.33.56%20PM.jpg)
+![Time Series Tracking](screenshots/02_time_series.jpg)
 
 ### 3. Geographic Threat Intelligence
 To track global threats, EFRiskEngine utilizes a Choropleth World Map indicating Risk by Transaction Country. Darker regions highlight higher concentrations of flagged transactions or geolocation anomalies (e.g., a user's IP originating far from their registered shipping address).
 
 Alongside it sits statistical breakdowns of Risk by Device Type, represented as an easily scannable stacked histogram.
 
-![Global Threat Heatmap](screenshots/Screenshot%202026-03-12%20at%208.34.19%20PM.jpg)
+![Global Threat Heatmap](screenshots/03_geo_device.jpg)
 
 ### 4. Payment Method Variance
 Moving away from simple averages, the Payment Method analysis utilizes a Data-Dense Treemap. The size of the blocks represents the total volume of transactions per payment method, while the color intensity indicates the average risk score, isolating high-volume, high-risk payment vectors.
 
-![Payment Method Treemap](screenshots/Screenshot%202026-03-12%20at%208.34.28%20PM.jpg)
+![Payment Method Treemap](screenshots/04_payment_treemap.jpg)
 
 ### 5. Analyst Investigation Table
 The Flagged Records tab serves as the primary workbench for Fraud Analysts. It automatically isolates transactions exceeding the user-defined risk threshold, color-coding them by severity (Yellow for Medium, Orange for High, Red for Critical). 
 
-![Flagged Transactions Workbench](screenshots/Screenshot%202026-03-12%20at%208.34.39%20PM.jpg)
+![Flagged Transactions Workbench](screenshots/05_flagged_records.jpg)
 
 ### 6. High-Risk User Profiling
 Below the transaction view, analysts can review aggregate profiles of High-Risk Users. This view aggregates a user's entire history, flagging metrics like excessive failed logins, recent password resets (indicating Account Takeover), and overall transaction risk.
 
-![High Risk User Profiling](screenshots/Screenshot%202026-03-12%20at%208.35.07%20PM.jpg)
+![High Risk User Profiling](screenshots/06_high_risk_users.jpg)
 
 ### 7. AI-Powered Insights
 To assist junior analysts and non-technical stakeholders, the Gemini AI integration analyzes a user's specific metadata to determine *why* they are risky. The AI can natively understand specific patterns, such as the relationship between a recent password reset and a sudden high-value transaction, identifying it as an Account Takeover.
 
-![AI Insights Tab](screenshots/Screenshot%202026-03-12%20at%208.35.49%20PM.jpg)
+![AI Insights Tab](screenshots/07_ai_insights.jpg)
 
 ---
 
